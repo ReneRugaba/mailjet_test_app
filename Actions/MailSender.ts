@@ -17,13 +17,11 @@ export default async function MailSender(body:BodyMail){
       "Messages":[
         {
           "From": {
-            "Email": "rugabarj@hotmail.fr",
-            "Name": "Rugaba"
+            "Email": body.from
           },
           "To": [
             {
-              "Email": body.to,
-              "Name": "Rugaba-rj"
+              "Email": body.to
             }
           ],
           "Subject": "Greetings from Mailjet.",

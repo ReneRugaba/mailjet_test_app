@@ -1,4 +1,5 @@
 export default interface BodyMail {
-    to: FormDataEntryValue |null,
-    message: FormDataEntryValue |null,
+    from: string|undefined
+    to: FormDataEntryValue | null
+    message: FormDataEntryValue | null
 }

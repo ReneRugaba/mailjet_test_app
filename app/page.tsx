@@ -9,12 +9,15 @@ export default function Home() {
 
     let model: BodyMail = {
       to: formData.get('email'),
-      message: formData.get('message')
+      message: formData.get('message'),
+      from: process.env.Mail_FROM
     }
     MailSender(model)
       .then(() => {
         console.log("Send!")
       })
+      .catch((err) => console.log(err)
+      )
 
   }
   return (
